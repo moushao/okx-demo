@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:okx_demo/main_viewmodel.dart';
+import 'package:okx_demo/route/routes.dart';
 
 import 'bar/main_bottom_bar.dart';
 import 'network/dio_instance.dart';
@@ -20,7 +21,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      onGenerateRoute: Routes.generateRoute,
+      initialRoute: RoutePath.tab,
     );
   }
 }
@@ -40,7 +42,6 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
-    // MainViewModel().getMarketTickers();
   }
 
   @override
@@ -59,7 +60,6 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      bottomNavigationBar: MainBottomBar,
     );
   }
 }

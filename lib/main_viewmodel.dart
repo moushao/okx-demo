@@ -1,7 +1,15 @@
+import 'package:flutter/cupertino.dart';
 import 'package:okx_demo/Api.dart';
+import 'package:okx_demo/model/ticker.dart';
 
-class MainViewModel {
+class MainViewModel with ChangeNotifier {
+  List<Ticker> tickers = [];
+
   void getMarketTickers() async {
-      Api().getMarketInstType();
+    await Api.instance.getMarketInstType().then((tickers) {
+      this.tickers = tickers;
+      print("tickers size: ${this.tickers.length}");
+      notifyListeners();
+    });
   }
 }

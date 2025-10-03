@@ -49,6 +49,9 @@ dependencies:
   synchronized: ^3.2.0
   logger: ^2.0.2
   convex_bottom_bar: ^3.2.0
+  flutter_svg: ^2.2.1
+  tab_indicator_styler: ^2.0.0
+  decimal: ^2.3.0
 
 dev_dependencies:
   flutter_test:
