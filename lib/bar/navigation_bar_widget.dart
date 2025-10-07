@@ -2,6 +2,7 @@ import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart' show SvgPicture;
+import 'package:get/get.dart';
 
 import '../l10n/app_localizations.dart';
 
@@ -65,7 +66,7 @@ List<TabItem> _buildItems(BuildContext context) {
   // items.add(_buildTabItem('icon_explore_grey.svg', 'icon_explore.svg', "探索"));
   // items.add(_buildTabItem('icon_assets_grey.svg', 'icon_assets.svg', "资产"));
 
-  items.add(_buildTabItem('icon_main_grey.svg', 'icon_main.svg', AppLocalizations.of(context)!.okx));
+  items.add(_buildTabItem('icon_main_grey.svg', 'icon_main.svg', AppLocalizations.of(Get.context!)!.okx));
   items.add(_buildTabItem('icon_markets_grey.svg', 'icon_markets.svg', AppLocalizations.of(context)!.market));
   items.add(_buildTabItem('icon_exchange_grey.svg', 'icon_exchange.svg', AppLocalizations.of(context)!.exchange));
   items.add(_buildTabItem('icon_explore_grey.svg', 'icon_explore.svg', AppLocalizations.of(context)!.explore));
