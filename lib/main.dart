@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:okx_demo/main_viewmodel.dart';
 import 'package:okx_demo/route/routes.dart';
 
 import 'bar/main_bottom_bar.dart';
+import 'l10n/app_localizations.dart';
 import 'network/dio_instance.dart';
 
 void main() {
@@ -23,6 +25,13 @@ class MyApp extends StatelessWidget {
       ),
       onGenerateRoute: Routes.generateRoute,
       initialRoute: RoutePath.tab,
+      localizationsDelegates: {
+        AppLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      },
+      supportedLocales: [Locale('en', ''), Locale('zh', '')],
     );
   }
 }

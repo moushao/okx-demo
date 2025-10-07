@@ -27,7 +27,7 @@ class CookieInterceptor extends Interceptor {
       if (list is List) {
         for (String? item in list) {
           cookies.add(item ?? "");
-          print("CookieInterceptor cookie = ${item.toString()}");
+          // print("CookieInterceptor cookie = ${item.toString()}");
         }
       }
       saveUserInfo(cookies.toString());
